@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             env.token=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
             steps {
-                git 'https://github.com/paycii/WhatTheChatSays.git'
+                git 'https://github.com/paycii/WhatTheChatSays'
                 sh "mvn install -Dchat_api_token=${env.token}"
             }
         }
