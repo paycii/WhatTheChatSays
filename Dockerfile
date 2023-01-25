@@ -10,6 +10,8 @@ COPY *.jar app.jar
 COPY ./localstorage /app/localstorage
 # Use environment variable in the Dockerfile
 ENV token=""
+# Port
+EXPOSE 8080
 
 # Run the app using the env variable and the app.jar file
 CMD ["sh", "-c", "java -Dchat_api_token=$token -jar app.jar"]

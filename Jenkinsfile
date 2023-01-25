@@ -13,7 +13,7 @@ pipeline {
                 
                  sh "cp target/*.jar $WORKSPACE"
                 
-                sh "docker build -e token=$env.token -t WhatTheChatSays ."
+                sh "docker build --build-arg token=$env.token -t WhatTheChatSays ."
             }
         }
     }
