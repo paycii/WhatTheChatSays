@@ -5,7 +5,7 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copy the built jar file from the Jenkins build to the container
-COPY target/*.jar app.jar
+COPY *.jar app.jar
 
 COPY ./localstorage /app/localstorage
 # Use environment variable in the Dockerfile
