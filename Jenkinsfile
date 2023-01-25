@@ -17,7 +17,7 @@ pipeline {
                 // script {
                 //     def customImage = docker.build("my-app:${env.BUILD_NUMBER}")
                 // }
-                sh "docker build -e token=${env.token}-t WhatTheChatSays ."
+                sh "docker build -e token=${env.token} -t WhatTheChatSays ."
             }
         }
     }
