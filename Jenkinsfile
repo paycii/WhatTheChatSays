@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "git clone https://github.com/paycii/WhatTheChatSays"
                 sh "cd WhatTheChatSays"
-                sh "chmod u+x ./mvwn
+                sh "chmod u+x ./mvnw
                 sh "./mvnw install -Dchat_api_token=$env.token"
             }
         }
