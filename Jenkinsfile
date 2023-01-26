@@ -4,8 +4,10 @@ pipeline {
         stage('Build') {
             env.token=YOUR-TOKEN-API
             steps {
-                git 'https://github.com/paycii/WhatTheChatSays'
-                sh "mvn install -Dchat_api_token=$env.token"
+                sh "git clone https://github.com/paycii/WhatTheChatSays"
+                sh "cd WhatTheChatSays"
+                sh "chmod u+x ./mvwn
+                sh "./mvnw install -Dchat_api_token=$env.token"
             }
         }
         stage('Docker Build') {
