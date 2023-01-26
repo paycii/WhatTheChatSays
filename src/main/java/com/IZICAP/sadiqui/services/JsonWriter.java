@@ -4,7 +4,7 @@ import com.IZICAP.sadiqui.mappers.QuestionAnswer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -32,6 +32,10 @@ public class JsonWriter {
 
     public static void writeDataToJson(QuestionAnswer questionAnswer) {
         try {
+            File file = new File(FILE_NAME);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<QuestionAnswer>>() {
             }.getType();
