@@ -15,4 +15,5 @@ The D flag is for token arg to be passed
 6. Else, if using Jenkins on a linux machine and assuming git, docker and maven are installed use the Jenkinsfile to build the jar and the image.
 7. You can now use POST method to test the API eg POST to http://url-server:7777/WhatTheChatSays/answer, please make sure that the header content is set to application/json and that the body contains a String
 # Description #
-The code contains a single controller endpoint ready for POST methods (/WhatTheChatSays/answer), it return a method called OpenAISErvice.getAnswer() that treats the input and contact OpenAI API, you'll notice a package mappers where I defined the necessary POJOs i need for the API. Also there are 2 additional classes for writing the answers to files
+The code contains a single controller endpoint ready for POST methods (/WhatTheChatSays/answer), it returns a method from the class OpenAISErvice.getAnswer() that treats the input and contact OpenAI API, you'll notice a package mappers where I defined the necessary POJOs i need for the API. Also there are 2 additional classes for writing the answers to files.
+Don't forget to add the token
