@@ -16,7 +16,7 @@
         stage('Docker Build') {
             steps {
                 
-                sh "cp target/*.jar $WORKSPACE"
+                //sh "cp target/*.jar $WORKSPACE"
                 
                 sh "docker build --build-arg token=$token -t what-the-chat-says ."
             }
