@@ -14,6 +14,19 @@ import java.util.List;
 
 public class JsonWriter {
 
+//    private static final String FILE_NAME = "questions_answers.json";
+//
+//    public static void writeDataToJson(List<QuestionAnswer> questionAnswers) {
+//        try (FileWriter writer = new FileWriter(FILE_NAME,true)) {
+//            Gson gson = new Gson();
+//            gson.toJson(questionAnswers, writer);
+//            System.out.println("Data written to json file successfully.");
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 
     private static final String FILE_NAME = "localstorage/questions_answers.json";
 

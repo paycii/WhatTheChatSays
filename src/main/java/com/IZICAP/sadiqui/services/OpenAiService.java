@@ -2,8 +2,7 @@ package com.IZICAP.sadiqui.services;
 
 import com.IZICAP.sadiqui.mappers.*;
 import com.IZICAP.sadiqui.mappers.Response;
-
-import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -21,7 +20,6 @@ import java.util.stream.Collectors;
 // this is the class that holds the service responsible for consuming openAi API
 
 @Service
-@Data
 public class OpenAiService {
 
     // RestTemplate to generate HTTP Requests
