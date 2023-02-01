@@ -48,6 +48,6 @@ public class ChatControllerTest {
 
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
-                .andExpect( content().json(new ObjectMapper().writeValueAsString(expectedAnswers)));
+                .andExpect(content().json(new ObjectMapper().writeValueAsString(expectedAnswers)));
     }
 }
